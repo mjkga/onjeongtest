@@ -32,4 +32,11 @@ class HomesController < ApplicationController
     
     redirect_to root_path
   end
+  
+  def delete
+    post = Cat.find(params[:id])
+    post.destroy
+    
+    redirect_to root_path
+  end
 end

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'homes/edit/:id' => 'homes#edit'
   get 'homes/update/:id' => 'homes#update'
   # get 'index' => 'homes#index'
+  get 'homes/delete/:id' => 'homes#delete'
   get 'homes/feeding_schedule'
   
   #게시판
