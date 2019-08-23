@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="/homes/index" method="get">
+                        <form action="/homes/update" method="get">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">급식소명</label>
                                 <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-name">
@@ -38,42 +38,35 @@
                                 <label for="message-text" class="col-form-label">공개여부</label>
                                 <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-show">
                             </div>
+                            <input type="submit" class="btn btn-primary" value="저장">
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">저장</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <% @posts.each do |x| %>
     <div class="col-lg-3 col-sm-12">
         <div class="card cat-feed-info">
-            <!--<a href="#" class="btn-cat-feed-sch">-->
-            <!--    <%= image_tag("cats/cat01.jpg", alt: "banner12", class: "img-fluid") %>-->
-            <!--</a>-->
             <a class="cat-feed-info-des">
                 <div class="cat-feed-info-title">
                     <h5 class="mt-3 mb-3">
-                        <strong>#치즈네</strong>
+                        <strong>#<%= x.name %></strong>
                     </h5>
                 </div>
                 <div class="hastag-box">
-                    <span class="hastag">#치즈냥</span>
-                    <span class="hastag">#닭고기파</span>
-                    <span class="hastag">#애기냥</span>
+                    <span class="hastag">#<%= x.info %></span>
                 </div>
                 <div class="row">
                     <div class="col-6 border-right">
                         <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                            <h4 class="m-1">운영중</h4>
+                            <h4 class="m-1"><%= x.status %></h4>
                             <p class="m-0">상태</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                            <h4 class="m-1">비공개</h4>
+                            <h4 class="m-1"><%= x.show %></h4>
                             <p class="m-0">공개여부</p>
                         </div>
                     </div>
@@ -81,6 +74,7 @@
             </a>
         </div>
     </div>
+    <% end %>
 
 </div>
 

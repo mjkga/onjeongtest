@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'templates/app-calender'
   root 'homes#index'
+  
+  get 'templates/app-calender'
   
   #메인화면(고양이 급식소 생성)
   get 'homes/index'
+  get 'homes/update'
   # get 'index' => 'homes#index'
   get 'homes/feeding_schedule'
   
