@@ -1,0 +1,32 @@
+<div class="modal fade" id="exampleModal<%=post.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/homes/update/<%= post.id %>" method="get">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">급식소명</label>
+                        <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-name" value="<%= post.name %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">급식소 정보</label>
+                        <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-info" value="<%= post.info %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">운영 상태</label>
+                        <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-status" value="<%= post.status %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">공개여부</label>
+                        <input type="text" class="form-control" id="recipient-name" name="v-cat-feed-show" value="<%= post.show %>">
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="수정하기">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

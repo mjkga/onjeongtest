@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   
   #메인화면(고양이 급식소 생성)
   get 'homes/index'
-  get 'homes/update'
+  get 'homes/create'
+  get 'homes/edit/:id' => 'homes#edit'
+  get 'homes/update/:id' => 'homes#update'
   # get 'index' => 'homes#index'
   get 'homes/feeding_schedule'
   
