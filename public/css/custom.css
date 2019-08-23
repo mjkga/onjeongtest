@@ -30,9 +30,14 @@ a:hover {
 }
 
 .cat-feed-info-title h5 {
+  display: inline-block;
   font-size: 1.5em;
   padding-left: 15px;
   color: #7571f9;
+}
+
+.cat-feed-info-title p {
+  display: inline-block;
 }
 
 .hastag-box {
@@ -41,7 +46,6 @@ a:hover {
 }
 .hastag-box span {
   display: inline-block;
-  padding: 0 5px;
   font-size: .9em;
   /*border: 1px solid #7571f9;*/
   /*border-radius: 10px;*/
@@ -63,10 +67,6 @@ a:hover {
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
-
-/* .cat-feed-info-title {
-
-} */
 
 
 /* 게시판 */
