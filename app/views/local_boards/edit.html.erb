@@ -1,0 +1,44 @@
+<!-- Stylesheet -->
+<link href="../css/style.css" rel="stylesheet">
+<link href="../plugins/summernote/dist/summernote.css" rel="stylesheet">
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">게시판 글쓰기</h4>
+                <div class="compose-content mt-5">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-transparent" placeholder="제목">
+                        </div>
+                        <div class="form-group">
+                            <!--<textarea class="textarea_editor form-control bg-light" rows="15" placeholder="Enter text ..."></textarea>-->
+                            <!--<div class="summernote">-->
+                            <!--    <h3>게시판 글쓰기</h3>-->
+                            <!--</div>-->
+                            <textarea class="summernote" name="editordata"></textarea>
+                        </div>
+                    </form>
+                    <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Attatchment</h5>
+                    <form action="#" class="dropzone">
+                        <div class="form-group">
+                            <div class="fallback">
+                                <input class="l-border-1" name="file" type="file" multiple="multiple">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-left m-t-15 pull-right">
+                    <button class="btn btn-primary" type="button">저장</button>
+                    <button class="btn btn-dark" type="button">취소</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="../plugins/summernote/dist/summernote.min.js"></script>-->
+<!--<script src="../plugins/summernote/dist/summernote-init.js"></script>-->

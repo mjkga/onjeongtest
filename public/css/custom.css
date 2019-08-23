@@ -1,0 +1,102 @@
+/* 공통 css */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+}
+
+/* 급식소 card css */
+/* .btn-feed-creat {
+
+} */
+
+.nav-header {
+  background: #7571f9 !important;
+}
+.nav-header .brand-logo a {
+  padding: 1.3rem 1.8125rem !important;
+}
+.nav-header .brand-logo a span {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.cat-feed-info {
+  height: 180px;
+  padding: 25px 10px;
+  overflow: hidden;
+}
+
+.cat-feed-info-title h5 {
+  font-size: 1.5em;
+  padding-left: 15px;
+  color: #7571f9;
+}
+
+.hastag-box {
+  padding-left: 15px;
+  color: #7571f9;
+}
+.hastag-box span {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: .9em;
+  /*border: 1px solid #7571f9;*/
+  /*border-radius: 10px;*/
+}
+
+.btn-feed-creat {
+  height: 180px;
+  line-height: 130px;
+  border: 2px dashed #ccc;
+  background-color: transparent;
+  font-size: 1.6em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cat-feed-info-des {
+  margin-top: -15px;
+  background-color: #fff;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+/* .cat-feed-info-title {
+
+} */
+
+
+/* 게시판 */
+
+.edit-area .card-title {
+  display: inline-block;
+}
+
+.table-striped tbody tr:nth-of-type(odd)  {
+  background-color: transparent ;
+}
+
+table.custom-table {
+  border-collapse: collapse !important;
+}
+
+table.custom-table thead th {
+  border-bottom: 1px solid #ccc;
+}
+
+table.custom-table th, table.custom-table td {
+  padding: 0.9rem;
+}
+
+table.custom-table tbody tr:hover {
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* .table.custom-table thead th {
+  border-bottom: 1px solid #999;
+} */

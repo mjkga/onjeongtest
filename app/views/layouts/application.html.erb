@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>온정</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <!-- Stylesheet -->
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.4.1.js' %>
+    
+  </head>
+
+  <body>
+    <!--******************* Preloader start ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--******************* Preloader end ********************-->
+    
+    <!--********************************** Main wrapper start ***********************************-->
+    <div id="main-wrapper">
+        <!--********************************** Nav header start ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="/homes/index.html">
+                    <b class="logo-abbr"><img src="/images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="/images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        On Jeong
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--********************************** Nav header end ***********************************-->
+        
+        <!--********************************** Header start ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
+                        </div>
+                        <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                        <div class="drop-down animated flipInX d-md-none">
+                            <form action="#">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/user/1.png" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                            </a>
+                                        </li>
+                                        
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                        </li>
+                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--********************************** Header end ti-comment-alt ***********************************-->
+        
+        <!--********************************** Sidebar start ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label"><%= link_to '급식소 생성', homes_index_path %></li>
+                    <li class="nav-label"><%= link_to '급식소 스케줄러', homes_feeding_schedule_path %></li>
+                    <!--<li class="nav-label"><#%= link_to '동네 게시판', posts_path %></li>-->
+                    <!--<li class="nav-label"><#%= link_to '게시판 글읽기', post_path %></li>-->
+                    <!--<li class="nav-label"><#%= link_to '게시판 글수정', edit_post_path %></li>-->
+                    <!--<li><a href="./pages/feeding-schedule.html">스케줄</a></li>-->
+                    <!--<li><a href="./pages/local-board.html">동네게시판</a></li>-->
+                    <!--<li><a href="#">냥박사</a></li>-->
+                    <!--<li><a href="#">Q&A</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <!--********************************** Sidebar end ***********************************-->
+        
+        <!--********************************** Content body start ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                
+                <%= yield %>
+                
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--********************************** Content body end ***********************************-->
+        
+    </div>
+    <!--********************************** Main wrapper end ***********************************-->
+    
+    <script src="../plugins/common/common.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/gleek.js"></script>
+    <script src="../js/styleSwitcher.js"></script>
+    
+    <!-- Circle progress -->
+    <script src="../plugins/circle-progress/circle-progress.min.js"></script>
+    
+    <!-- fullCalender -->
+    <script src="../plugins/jqueryui/js/jquery-ui.min.js"></script>
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/fullcalendar/js/fullcalendar.min.js"></script>
+    <script src="../js/plugins-init/fullcalendar-init.js"></script>
+    
+    <!-- Pignose Calender -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    
+    <script src="../plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="../plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+    
+    <script src="summernote.min.js"></script>
+    <script src="summernote-init.js"></script>
+    
+    <script src="../js/dashboard/dashboard-1.js"></script>
+  </body>
+</html>
