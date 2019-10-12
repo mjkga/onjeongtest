@@ -84,7 +84,12 @@
                                         <li>
                                             <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                         </li>
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <!-- <li><a href="page-login.html"><i class="icon-key"></i> <span>Login</span></a></li> -->
+                                        <li>
+                                            <span><%= link_to "Login", new_user_session_path, class: 'icon-key' %></span>
+                                        </li>
+
+                                        <!-- <p> <%= link_to "로그인", new_user_session_path, class: 'btn btn-default' %> </p> -->
                                     </ul>
                                 </div>
                             </div>

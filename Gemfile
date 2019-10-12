@@ -5,7 +5,9 @@ ruby '2.6.3'
 
 #추가
 gem 'jquery-rails'
-#gem 'devise'
+gem 'devise'
+gem 'omniauth-kakao'
+gem 'figaro'
 #gem 'cancancan'
 #gem 'rolify'
 gem 'tui_editor-rails'
